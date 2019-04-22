@@ -42,8 +42,13 @@ app.use(morgan('dev'))
 
 
 
-mongoose.connect('mongodb+srv://csideuser22:8t5e8fugr@clustercside-ko2vb.mongodb.net/test?retryWrites=true',
-{ useNewUrlParser: true });
+if (process.env.NODE_ENV == 'testCloud' || process.env.NODE_ENV == 'production') {
+    mongoose.connect('mongodb://csideuser22:test123@cluster0-shard-00-00-ko2vb.mongodb.net:27017,cluster0-shard-00-01-ko2vb.mongodb.net:27017,cluster0-shard-00-02-ko2vb.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true',
+        { useNewUrlParser: true });
+} else if (process.env.NODE_ENV !== 'test') {
+    mongoose.connect('mongodb://localhost/localbased',
+        { useNewUrlParser: true });
+}
 
 
 
