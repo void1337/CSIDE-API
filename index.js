@@ -41,13 +41,10 @@ app.use(morgan('dev'))
 //mongodb
 
 
-if ( process.env.NODE_ENV == 'production') {
-    mongoose.connect('mongodb+srv://csideuser22:8t5e8fugr@clustercside-ko2vb.mongodb.net/test?retryWrites=true',
-        { useNewUrlParser: true });
-} else {
-    mongoose.connect('mongodb://localhost/cside-indivtest433666',
-        { useNewUrlParser: true });
-}
+
+mongoose.connect('mongodb+srv://csideuser22:8t5e8fugr@clustercside-ko2vb.mongodb.net/test?retryWrites=true',
+{ useNewUrlParser: true });
+
 
 
 
