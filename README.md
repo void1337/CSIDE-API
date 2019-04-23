@@ -3,6 +3,7 @@
 OpenWebCatalogue is a Catalogue of books including authors and publishers in angular, connected to a node.js api.
 
 You can reach the angular application here: https://owc-angular-jh.herokuapp.com/home
+
 And the Node.js api here: https://node-cside-jh.herokuapp.com/
 
 ## Getting Started
