@@ -26,7 +26,7 @@ Run the command 'node index.js' in the root folder.
 ## Built With
 
 * [Node](https://nodejs.org/en/) - Runtime
-* [mongoDB](https://www.mongodb.com/) - Runtime
+* [mongoDB](https://www.mongodb.com/) - Database solution
 
 ## Contributing & Questions
 
